@@ -7,7 +7,7 @@
 
             }
         </style>
-        <h1>Hello World {{name}}</h1>
+        <h1>Hello World {{name}} {{sobrenome}}</h1>
     </template>
     <script>
         Polymer({
@@ -16,6 +16,9 @@
                 name: {
                     type: String,
                     value: "exemplo"
+                },
+                sobrenome: {
+                    type: String
                 }
             }
         });
