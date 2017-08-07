@@ -8,6 +8,7 @@
             }
         </style>
         <h1>Hello World {{name}} {{sobrenome}}</h1>
+        <h1 on-tap="btn" id="meu">teste</h1>
     </template>
     <script>
         Polymer({
@@ -16,11 +17,18 @@
                 name: {
                     type: String,
                     value: "exemplo"
-                },
-                sobrenome: {
-                    type: String
                 }
+            },
+            listeners: {
+                'tap': 'write'
+            },
+            write: function(){
+                console.log('done')
+            },
+            btn: function(){
+                console.log('teste');
             }
+            
         });
     </script>
 </dom-module>
